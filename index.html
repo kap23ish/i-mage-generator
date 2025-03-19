@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">AI Image Generator</div>
+            <ul class="nav-links">
+                <li class="active"><a href="#generator">HOME</a></li>
+                <li><a href="#gallery" id="gallery-link">GALLERY</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="generator" class="prompt-section">
+            <div class="prompt-container">
+                <h1>Create Any Image You Can Imagine</h1>
+                <p>Type any description and see it come to life - try "a dog wearing a ribbon" or "a man on a bike"</p>
+                <div class="input-container">
+                    <input type="text" id="prompt-input" placeholder="Describe anything you want to see...">
+                    <button id="generate-btn">Generate</button>
+                </div>
+                <div class="options-container">
+                    <div class="option">
+                        <label for="image-style">Style:</label>
+                        <select id="image-style">
+                            <option value="realistic" selected>Realistic</option>
+                            <option value="artistic">Artistic</option>
+                            <option value="cartoon">Cartoon</option>
+                            <option value="3d">3D Render</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="suggestion-chips">
+                    <span class="chip" data-prompt="a dog wearing a ribbon">a dog wearing a ribbon</span>
+                    <span class="chip" data-prompt="a man on a bike">a man on a bike</span>
+                    <span class="chip" data-prompt="sunset over mountains">sunset over mountains</span>
+                    <span class="chip" data-prompt="futuristic city">futuristic city</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="realtime-status">
+            <div class="status-indicator">
+                <div class="status-dot"></div>
+                <span id="status-text">Ready to generate</span>
+            </div>
+            <div class="current-prompt">
+                <span id="current-prompt-text"></span>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="gallery-container">
+                <div class="image-card">
+                    <div class="image-placeholder gradient-bg">
+                        <span>AI Generated Image</span>
+                    </div>
+                    <div class="image-info">
+                        <span class="prompt-preview">Your prompt will appear here</span>
+                        <button class="save-btn" title="Save to Gallery">
+                            <i class="fas fa-save"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-placeholder gradient-bg">
+                        <span>AI Generated Image</span>
+                    </div>
+                    <div class="image-info">
+                        <span class="prompt-preview">Your prompt will appear here</span>
+                        <button class="save-btn" title="Save to Gallery">
+                            <i class="fas fa-save"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-placeholder gradient-bg">
+                        <span>AI Generated Image</span>
+                    </div>
+                    <div class="image-info">
+                        <span class="prompt-preview">Your prompt will appear here</span>
+                        <button class="save-btn" title="Save to Gallery">
+                            <i class="fas fa-save"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <div class="image-placeholder gradient-bg">
+                        <span>AI Generated Image</span>
+                    </div>
+                    <div class="image-info">
+                        <span class="prompt-preview">Your prompt will appear here</span>
+                        <button class="save-btn" title="Save to Gallery">
+                            <i class="fas fa-save"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery-page">
+            <div class="gallery-header">
+                <h2>Your Saved Images</h2>
+                <p>Images you save will appear here</p>
+            </div>
+            <div class="saved-images-container">
+                <div class="empty-gallery">
+                    <i class="fas fa-images"></i>
+                    <p>No saved images yet. Generate some images and save them to see them here!</p>
+                </div>
+                <!-- Saved images will be added here dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 AI Image Generator. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html> 
